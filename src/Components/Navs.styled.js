@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const NavList = styled.ul`
   display: flex;
@@ -14,9 +14,9 @@ export const LinkStyled = styled(Link)`
   padding: 3px 15px;
   position: relative;
   text-decoration: none;
-  color: 	#808080;
+  color: ${({ theme }) => theme.mainColors.gray};
   &.active {
-    color: #808080;
+    color: ${({ theme }) => theme.mainColors.blue};
     &:after {
       content: '';
       position: absolute;
@@ -24,7 +24,7 @@ export const LinkStyled = styled(Link)`
       height: 2px;
       left: 0%;
       bottom: 0;
-      background-color: #0000FF;
+      background-color: ${({ theme }) => theme.mainColors.blue};
       animation: slide-in 0.3s ease-in forwards;
       @keyframes slide-in {
         from {
